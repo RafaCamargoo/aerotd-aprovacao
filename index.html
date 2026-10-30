@@ -103,6 +103,12 @@ footer .logo-img{height:52px;width:auto}
 .hero h1{font-size:clamp(40px,4.4vw,70px);margin:20px 0 22px}
 .lead{font-size:clamp(17px,1.35vw,20px);color:#D6E6F7;max-width:560px;font-weight:500}
 .lead strong{color:#fff;font-weight:800}
+.crea-seal{display:flex;align-items:center;gap:14px;max-width:600px;padding:14px 18px 14px 14px;border-radius:16px 16px 16px 0;background:rgba(178,216,255,.14);border:1.5px solid rgba(178,216,255,.55);box-shadow:0 18px 40px -24px rgba(0,0,0,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.crea-ico{flex-shrink:0;width:46px;height:46px;border-radius:12px;background:var(--blue-300);color:var(--navy-700);display:grid;place-items:center}
+.crea-ico svg{width:26px;height:26px}
+.crea-seal p{font-size:15px;line-height:1.4;color:#E4EEF9;font-weight:500}
+.crea-seal p b{display:block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-300);margin-bottom:3px}
+.crea-seal p strong{color:#fff;font-weight:800}
 .hero-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;align-items:center}
 .pill-live{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(178,216,255,.35);padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;background:rgba(2,26,51,.45);backdrop-filter:blur(6px)}
 .pill-live i{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(255,0,0,.7);animation:ping 1.8s infinite}
@@ -202,6 +208,9 @@ section{position:relative}
 .support{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
 .support div{display:flex;gap:14px;align-items:flex-start;padding:20px 22px;border-radius:14px;background:#fff;border:1px solid var(--line-light);font-size:15px;color:var(--muted-dark)}
 .support b{color:var(--ink)}
+.crea-band{display:flex;align-items:center;gap:18px;margin-top:16px;padding:22px 26px;border-radius:16px;background:var(--navy-700);color:#D6E6F7;font-size:16px;line-height:1.5;box-shadow:0 26px 50px -30px rgba(0,63,129,.8)}
+.crea-band b{color:#fff;font-weight:800}
+.crea-band strong{color:var(--blue-300);font-weight:800}
 .support svg{width:26px;height:26px;flex-shrink:0;color:var(--red)}
 
 /* ---------- Dor (sticky + zoom) ---------- */
@@ -348,7 +357,15 @@ section{position:relative}
 }
 
 /* ---------- Diferenciais ---------- */
-.diffs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.diffs{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.diff.diff-main{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:clamp(20px,3vw,44px);padding:clamp(28px,3.4vw,46px);background:linear-gradient(135deg,var(--navy-700),var(--navy-800));border-color:transparent;color:#fff;box-shadow:0 40px 80px -40px rgba(0,63,129,.7)}
+.diff.diff-main .dn{color:var(--blue-300);font-size:clamp(84px,9vw,130px)}
+.diff.diff-main:hover .dn{color:#fff}
+.diff.diff-main h3{font-size:clamp(26px,2.6vw,38px);margin:14px 0 10px;color:#fff;letter-spacing:-.025em}
+.diff.diff-main p{color:#D6E6F7;font-size:clamp(16px,1.3vw,19px);max-width:620px}
+.diff.diff-main p b{color:#fff}
+.crea-ico.big{width:clamp(72px,7vw,104px);height:clamp(72px,7vw,104px);border-radius:24px}
+.crea-ico.big svg{width:55%;height:55%}
 .diff{position:relative;border-radius:20px;padding:34px 30px 38px;background:#fff;border:1px solid var(--line-light);overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s}
 .diff:hover{transform:translateY(-8px);box-shadow:0 34px 70px -36px rgba(0,63,129,.5)}
 .diff .dn{font-family:var(--display);font-size:92px;line-height:.85;color:var(--navy-700);display:block;transform-origin:0 100%;transition:transform .6s var(--ease),color .4s}
@@ -425,6 +442,8 @@ footer{background:var(--navy-950);border-top:10px solid var(--red);padding:48px 
   .nav-links{display:none}
   .pain-inner,.comm-grid,.faq-wrap{grid-template-columns:1fr}
   .profiles,.diffs,.gallery{grid-template-columns:1fr}
+  .diff.diff-main{grid-template-columns:1fr;gap:10px}
+  .diff.diff-main .crea-ico.big{position:absolute;right:24px;top:28px;width:60px;height:60px;border-radius:16px}
   .gal-item{height:260px}
   .support{grid-template-columns:1fr}
   .hours-grid{grid-template-columns:1fr 1fr}
@@ -437,11 +456,22 @@ footer{background:var(--navy-950);border-top:10px solid var(--red);padding:48px 
   .comm-list{justify-self:stretch;max-width:none}
   .scroll-hint{display:none}
   .hero-jump{display:flex;width:100%}
+  .crea-band{flex-direction:column;align-items:flex-start;gap:12px;padding:20px}
   .hero-jump .label{flex:1;justify-content:center}
 }
 @media (max-width:560px){
   .stats{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px}
   .hero h1{font-size:clamp(34px,9.6vw,46px)}
+  .hero{padding-top:96px}
+  .hero h1{margin:16px 0 14px}
+  .crea-seal{gap:12px;padding:11px 14px 11px 11px}
+  .crea-ico{width:38px;height:38px;border-radius:10px}
+  .crea-ico svg{width:22px;height:22px}
+  .crea-seal p{font-size:13.5px;line-height:1.35}
+  .crea-seal p b{font-size:11px;margin-bottom:2px}
+  .lead{font-size:16px}
+  .hero-meta{margin-top:18px}
+  .hero-jump{margin-top:18px}
   .btn-cta .label{padding:16px 12px;white-space:nowrap;font-size:clamp(12px,3.6vw,15px);letter-spacing:-.015em}
   .btn-cta .arrow{width:52px}
   .nav .btn-cta{display:none}
@@ -509,7 +539,10 @@ footer{background:var(--navy-950);border-top:10px solid var(--red);padding:48px 
 
   <div class="container hero-inner">
     <div class="hero-copy" id="heroCopy">
-      <span class="tag">Especialização para engenheiros</span>
+      <div class="crea-seal">
+        <span class="crea-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <p><b>Direito ao CREA</b>A única pós-graduação que dá direito ao CREA para quem tem formação em <strong>engenharia mecânica plena</strong>.</p>
+      </div>
       <h1 class="display split" id="heroTitle">Pós-graduação em <em>Engenharia Aeronáutica</em> para quem já é engenheiro.</h1>
       <p class="lead" data-reveal>Seu diploma de engenharia mais <strong>850 horas</strong> de aerodinâmica, estruturas, propulsão, aviônica e projeto de aeronaves, com professores que atuam na indústria.</p>
       <div class="hero-meta" data-reveal>
@@ -558,14 +591,17 @@ footer{background:var(--navy-950);border-top:10px solid var(--red);padding:48px 
         <div class="profile-body">
           <span class="tag tag-sm">Já atua na aviação</span>
           <h3>Quer dar o próximo passo no setor</h3>
-          <!-- PENDENTE: confirmar a claim de habilitação -->
-          <p>Engenheiro que já atua na aviação e busca a habilitação para exercer a engenharia aeronáutica.</p>
+          <p>Engenheiro que já atua na aviação e busca a formação específica para exercer a engenharia aeronáutica. Se a sua formação é em engenharia mecânica plena, você sai com o direito ao CREA.</p>
         </div>
       </article>
     </div>
     <div class="support">
       <div data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Qualquer engenharia pode entrar.</b></span></div>
       <div data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6M4.9 4.9l4.2 4.2M19.1 19.1l-4.2-4.2M2 12h6M22 12h-6"/></svg><span>Quem vem da <b>engenharia mecânica</b> tem mais vantagem de base.</span></div>
+    </div>
+    <div class="crea-band" data-reveal>
+      <span class="crea-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <p><b>Engenheiro mecânico pleno?</b> Você sai da pós com o <strong>direito ao CREA na engenharia aeronáutica</strong>. É a única pós-graduação que dá direito ao CREA para quem tem formação em engenharia mecânica plena.</p>
     </div>
   </div>
 </section>
@@ -724,21 +760,24 @@ footer{background:var(--navy-950);border-top:10px solid var(--red);padding:48px 
       <h2 class="h2 display split">O que separa <em>esta formação</em></h2>
     </div>
     <div class="diffs">
-      <article class="diff spot" data-reveal>
+      <article class="diff diff-main spot" data-reveal>
         <span class="dn">01</span>
+        <div class="diff-main-body">
+          <span class="tag tag-sm">Diferencial exclusivo</span>
+          <h3>Direito ao CREA na engenharia aeronáutica</h3>
+          <p>A única pós-graduação que dá direito ao CREA para quem tem formação em <b>engenharia mecânica plena</b>.</p>
+        </div>
+        <span class="crea-ico big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      </article>
+      <article class="diff spot" data-reveal>
+        <span class="dn">02</span>
         <h3>Base ideal para quem vem da mecânica</h3>
         <p>Capacita você para o desempenho profissional na engenharia aeronáutica, aberta a engenheiros de todas as especialidades.</p>
       </article>
       <article class="diff spot" data-reveal>
-        <span class="dn">02</span>
+        <span class="dn">03</span>
         <h3>Professores atuantes na indústria</h3>
         <p>Engenheiros que vivem as técnicas e práticas do setor aeronáutico.</p>
-      </article>
-      <!-- PENDENTE: confirmar a claim de CREA/CONFEA antes de publicar (PDF do coordenador x reunião) -->
-      <article class="diff spot" data-reveal>
-        <span class="dn">03</span>
-        <h3>Extensão de atribuições no sistema CREA/CONFEA</h3>
-        <p>Formação voltada à extensão de atribuições profissionais para atuar na engenharia aeronáutica.</p>
       </article>
     </div>
     <!-- Fotos do drive do cliente: estrutura e equipe AeroTD (não são da turma da pós) -->
@@ -776,7 +815,8 @@ footer{background:var(--navy-950);border-top:10px solid var(--red);padding:48px 
       <h2 class="h2 display split">Ficou <em>alguma dúvida?</em></h2>
     </div>
     <div class="faq-list" data-reveal>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Preciso ser engenheiro mecânico?<span class="pm"></span></button><div class="faq-a"><div><p>Não. Qualquer engenharia pode entrar. A mecânica tem mais vantagem de base.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">A pós dá direito ao CREA?<span class="pm"></span></button><div class="faq-a"><div><p>Sim. É a única pós-graduação que dá direito ao CREA para quem tem formação em engenharia mecânica plena.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Preciso ser engenheiro mecânico?<span class="pm"></span></button><div class="faq-a"><div><p>Não. Qualquer engenharia pode entrar, e quem vem da mecânica tem mais vantagem de base. O direito ao CREA vale para quem tem formação em engenharia mecânica plena.</p></div></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Posso entrar sem ter concluído a graduação?<span class="pm"></span></button><div class="faq-a"><div><p>Não. Para entrar na pós, é preciso já ter concluído a graduação em engenharia.</p></div></div></div>
       <!-- PENDENTE: confirmar data exata -->
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Quando começa?<span class="pm"></span></button><div class="faq-a"><div><p>A primeira turma abre em março. Quem está na lista de espera é avisado primeiro quando as matrículas abrirem.</p></div></div></div>
